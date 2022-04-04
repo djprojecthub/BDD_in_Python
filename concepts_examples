@@ -1,0 +1,34 @@
+***1_Feature file with Scenario***
+Feature − Payment Process
+Scenario − Credit card transaction
+    Given user is on credit card payment screen
+    Then user should be able to complete credit card payment
+
+***1_Implementation file(in Python)***
+from behave import *
+@given('user is on credit card payment screen')
+def impl(context):
+    print('check due amount if any')
+@then('user should be able to complete credit card payment')
+def impl(context):
+    print('successful transaction')
+
+***2_Feature file with Scenario Outline***
+Feature − User information
+Scenario Outline - Check login functionality
+    Given user enters <name> and <password>
+    Then user should be logged in
+    Examples: Credentials
+        | name  | password |
+        | user1 | pwd1     |
+        | user2 | pwd2     |
+
+***2_Implementation file(in Python)***
+from behave import *
+@given('user enters "{name}" and "{password}"')
+def step_impl(context, name, password):
+    print("Username for login: {}".format(name))
+        print("Password for login: {}".format(password))
+@then('user should be logged in')
+def step_impl(context):
+    pass
