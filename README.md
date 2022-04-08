@@ -4,9 +4,11 @@ stakeholders of the project can contribute towards the software development.
 
 ![1_V3CyC87v-5oj6icmWeu-fg](https://user-images.githubusercontent.com/70992215/162369988-1cc95351-2222-43ae-b3c2-bfcaa8e2dd2e.jpg)
 
-Behave is a tool used for BDD in Python programming language.
+**Behave** is a tool used for BDD in Python programming language.
 
-Behave has tests developed in plain text with the implementation logic in Python.
+**Behave** has tests developed in plain text with the implementation logic in Python.
+
+https://behave.readthedocs.io/en/stable/api.html
 
 1. **Behave works with three different file types** :
  
@@ -24,24 +26,35 @@ Behave has tests developed in plain text with the implementation logic in Python
         a feature file and it must be declared prior to a Scenario or Scenario
         outline.
     3. **Scenario** :
+    
          a. Defines behaviour of the application that is being tested.
+         
          b. It has multiple steps which begins with keyword Given, Then,
             When, and so on.
+            
          c. It checks a single characteristic or an expected result.
     4. **Scenario Outline** :
+    
          a. It is used when we have group of similar criteria and the results
             to be passed in a scenario.
+            
          b. It is accompanied with an Examples table and can have multiple
             Examples tables.
+            
          c. The tests gets executed once for every row found after the header
             row within the Examples table.
+            
          d. The values to be tested are represented by their name enclosed in
-            brackets<>. These names should match with the Examples table header.
+            brackets <>. These names should match with the Examples table header.
+            
     5. **Given** : It is used to place the system in a familiar circumstance prior to
        the interaction of the user with the system.
+       
     6. **When** : It is used to add the essential task to be performed by the user.
-    7. **Then** : It is used to get the expected results.
-    8. **And, But** : Use them for better readability when we have multiple Given,
+    
+    8. **Then** : It is used to get the expected results.
+    
+    10. **And, But** : Use them for better readability when we have multiple Given,
        When, Then consecutive steps.
 
 3.  **Context in behave** :
