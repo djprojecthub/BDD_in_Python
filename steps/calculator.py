@@ -12,7 +12,7 @@ def step_impl(context):
 @when(u'I input "{inp}" to calculator')
 def step_impl(context, inp):
     print(u'STEP: When I input "{}" to calculator'.format(inp))
-    context.result = run(inp)
+    context.result = run(inp) # "2+3" = 5
 
 
 @then(u'I get result "{out}"')

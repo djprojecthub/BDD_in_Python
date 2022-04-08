@@ -9,7 +9,7 @@ Feature: Sending a newsletter to the customer
   Scenario: Subscriber with no purchases don't receive the newsletter
     Given Akansha bought no products
     When we generate newsletter recipients
-    Then Bob is not on the list
+    Then Akansha is not on the list
 
   # Rule: Use only the most recent purchase
 
@@ -21,4 +21,6 @@ Feature: Sending a newsletter to the customer
 
   Scenario: Newsletter mentions only the most recent purchase
     Given Diwakar purchased a product
-    And Diwakar
+    And Diwakar purchased another product
+    When we generate newsletter recipients
+    Then Diwakar gets a message about the second purchase
